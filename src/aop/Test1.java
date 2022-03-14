@@ -12,7 +12,10 @@ public class Test1 {
 //        Book book = springContainer.getBean("book", Book.class);
 
         uniLibrary.getBook();
-        uniLibrary.getMagazine();
+        uniLibrary.returnMagazine();
+        uniLibrary.addBook();
+
+//        uniLibrary.getMagazine();
 
 //        uniLibrary.returnBook();
 
