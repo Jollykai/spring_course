@@ -8,14 +8,14 @@ public class Test1 {
                 new AnnotationConfigApplicationContext(MyConfig.class);
 
         UniLibrary uniLibrary = springContainer.getBean("uniLibrary", UniLibrary.class);
-
-//        Book book = springContainer.getBean("book", Book.class);
+        Book book = springContainer.getBean("book", Book.class);
 
         uniLibrary.getBook();
-        uniLibrary.getMagazine();
+        uniLibrary.addBook("Kai", book);
+        uniLibrary.addMagazine();
 
 //        uniLibrary.returnMagazine();
-//        uniLibrary.addBook();
+//        uniLibrary.getMagazine();
 //        uniLibrary.returnBook();
 
 //        SchoolLibrary schoolLibrary = springContainer.getBean("schoolLibrary", SchoolLibrary.class);
