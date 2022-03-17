@@ -1,0 +1,26 @@
+package aop.aspects;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect
+public class NewLogicAspect {
+
+    @Around("execution(public String returnBook())")
+    public Object aroundReturnBookLoggingAdvice(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
+        System.out.println("aroundReturnBookLoggingAdvice: В библиотеку пытаются вернуть книгу");
+        Long begin = System.currentTimeMillis();
+        Object targetMethodResult = proceedingJoinPoint.proceed();
+//        targetMethodResult = "Преступление и наказание";
+        Long end = System.currentTimeMillis();
+        System.out.println("aroundReturnBookLoggingAdvice: В библиотеку успещно возвращают книгу");
+        System.out.println("aroundReturnBookLoggingAdvice: Метод выполнил работу за: " +
+                (end - begin) + " миллисекунд");
+
+        return targetMethodResult;
+
+    }
+}
