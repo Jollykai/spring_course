@@ -9,5 +9,3 @@
 /dataSources.local.xml
 *.class
 /target
-*.zip
-*.jar
