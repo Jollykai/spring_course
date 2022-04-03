@@ -16,7 +16,7 @@ public class Test1 {
         Session session = null;
 
         try {
-//            Session session = factory.getCurrentSession();
+//            session = factory.getCurrentSession();
 //            Employee employee = new Employee("Zaur", "Tregulov", "IT",500);
 //            Detail detail = new Detail("Baku", "123456789", "zaurtregulov@gmail.com");
 //
@@ -53,7 +53,7 @@ public class Test1 {
             session = factory.getCurrentSession();
             session.beginTransaction();
 
-            Employee employee = session.get(Employee.class, 2);
+            Employee employee = session.get(Employee.class, 1);
             session.delete(employee);
 
             session.getTransaction().commit();
