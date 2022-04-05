@@ -20,6 +20,7 @@
       <root url="jar://$PROJECT_DIR$/lib/txw2-2.3.1.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/javassist-3.24.0-GA.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/javax.persistence-api-2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/mysql-connector-java-8.0.28/mysql-connector-java-8.0.28.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
