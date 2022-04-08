@@ -21,6 +21,9 @@
     </span>
     <br><br>
     Salary <form:input path="salary"/>
+    <span style="color: red; ">
+        <form:errors path="salary"/>
+    </span>
     <br><br>
     Department <form:select path="department">
 <%--    <form:option value="Information Technology" label="IT"/>--%>
@@ -40,6 +43,13 @@
 <%--    IT <form:checkbox path="languages" value="Italian"/>--%>
 <%--    DE <form:checkbox path="languages" value="Deutch"/>--%>
     <form:checkboxes path="languages" items="${employee.languageList}"/>
+    <br><br>
+
+    Phone number <form:input path="phoneNumber"/>
+    <span style="color: red; ">
+        <form:errors path="phoneNumber"/>
+    </span>
+    <br><br>
 
     <input type = "submit" value = "OK">
 
