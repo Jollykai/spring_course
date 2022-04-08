@@ -1,5 +1,7 @@
 package com.jollykai.spring.mvc;
 
+import com.jollykai.spring.mvc.validation.CheckEmail;
+
 import javax.validation.constraints.*;
 import java.util.HashMap;
 import java.util.Map;
@@ -19,6 +21,17 @@ public class Employee {
     private String[] languages;
     private Map<String, String> languageList;
     private String phoneNumber;
+    @CheckEmail(value = "abc.com", message="email must ends with abc.com")
+    private String email;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     @Pattern(regexp = "\\d{3}-\\d{2}-\\d{2}", message = "please use pattern XXX-XX-XX")
     public String getPhoneNumber() {
         return phoneNumber;

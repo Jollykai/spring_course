@@ -50,6 +50,11 @@
         <form:errors path="phoneNumber"/>
     </span>
     <br><br>
+    E-main <form:input path="email"/>
+    <span style="color: red; ">
+        <form:errors path="email"/>
+    </span>
+    <br><br>
 
     <input type = "submit" value = "OK">
 
