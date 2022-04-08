@@ -11,8 +11,14 @@
 <form:form action ="showDetails" modelAttribute="employee">
 
     Name <form:input path="name"/>
+    <span style="color: red; ">
+        <form:errors path="name"/>
+    </span>
     <br><br>
     Surname <form:input path="surname"/>
+    <span style="color: red; ">
+        <form:errors path="surname"/>
+    </span>
     <br><br>
     Salary <form:input path="salary"/>
     <br><br>
