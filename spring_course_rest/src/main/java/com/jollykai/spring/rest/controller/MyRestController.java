@@ -4,6 +4,7 @@ import com.jollykai.spring.rest.entity.Employee;
 import com.jollykai.spring.rest.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,5 +21,11 @@ public class MyRestController {
     public List<Employee> showAllEmployees() {
         List<Employee> allEmployees = employeeService.getAllEmployees();
         return allEmployees;
+    }
+
+    @GetMapping("/employees/{employeeId}")
+    public Employee getEmployee(@PathVariable int employeeId) {
+        Employee employee = employeeService.getEmployee(employeeId);
+        return employee;
     }
 }
