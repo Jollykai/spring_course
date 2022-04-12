@@ -16,7 +16,5 @@ Only for Managers
 <br><br>
 <input type="button" value="Sign Out" onclick="window.location.href = '/spring_course_security/login'">
 
-
-
 </body>
 </html>
