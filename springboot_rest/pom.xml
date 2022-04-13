@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.jollykai.spring.springboot</groupId>
-    <artifactId>spring_course_springboot</artifactId>
+    <artifactId>springboot_rest</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring_course_springboot</name>
-    <description>spring_course_springboot</description>
+    <name>springboot_rest</name>
+    <description>springboot_rest</description>
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -39,6 +39,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
         </dependency>
 
     </dependencies>
